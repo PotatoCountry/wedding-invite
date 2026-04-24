@@ -448,20 +448,13 @@ body {
 }
 
 .date-summary {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: 1.6;
+    line-height: 1.5;
     text-align: center;
     color: #181818;
-    margin-top: 4px;
-}
-
-.date-venue {
-    font-size: 1.28rem;
-    font-weight: 700;
-    text-align: center;
-    color: #181818;
-    margin-top: 14px;
+    margin-top: 2px;
+    margin-bottom: 6px;
 }
 
 #date h2 {
@@ -498,11 +491,7 @@ body {
 
 @media (max-width: 420px) {
     .date-summary {
-        font-size: 1.28rem;
-    }
-
-    .date-venue {
-        font-size: 1.02rem;
+        font-size: 1.22rem;
     }
 
     .calendar {
