@@ -65,14 +65,12 @@ document.getElementById('rsvp-form').addEventListener('submit', function(e) {
         meal: formData.get('meal'),
         message: formData.get('message')
     };
-    fetch('/api/rsvp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-    }).then(() => {
-        alert('참석 의사가 전달되었습니다!');
-        closeModal('rsvp-modal');
-    });
+    // 로컬 스토리지에 저장 (백엔드 대신)
+    let rsvps = JSON.parse(localStorage.getItem('rsvps') || '[]');
+    rsvps.push(data);
+    localStorage.setItem('rsvps', JSON.stringify(rsvps));
+    alert('참석 의사가 전달되었습니다!');
+    closeModal('rsvp-modal');
 });
 
 // 사이드 선택
@@ -83,19 +81,16 @@ function selectSide(side) {
 
 // 방명록 로드
 function loadGuestbook() {
-    fetch('/api/guestbook')
-        .then(response => response.json())
-        .then(messages => {
-            const container = document.getElementById('guestbook-posts');
-            container.innerHTML = '';
-            messages.forEach(msg => {
-                const post = document.createElement('div');
-                post.className = 'post-it';
-                post.style.background = ['#d8e592', '#c4d47f', '#b0c26a', '#9cb055', '#88a240'][msg[2]];
-                post.innerHTML = `<strong>${msg[0]}</strong><br>${msg[1]}`;
-                container.appendChild(post);
-            });
-        });
+    const messages = JSON.parse(localStorage.getItem('guestbook') || '[]');
+    const container = document.getElementById('guestbook-posts');
+    container.innerHTML = '';
+    messages.forEach(msg => {
+        const post = document.createElement('div');
+        post.className = 'post-it';
+        post.style.background = ['#d8e592', '#c4d47f', '#b0c26a', '#9cb055', '#88a240'][msg.color_index];
+        post.innerHTML = `<strong>${msg.author}</strong><br>${msg.content}`;
+        container.appendChild(post);
+    });
 }
 
 loadGuestbook();
@@ -106,14 +101,12 @@ document.getElementById('guestbook-form').addEventListener('submit', function(e)
     const name = this.querySelector('input').value;
     const message = this.querySelector('textarea').value;
     const color = Math.floor(Math.random() * 5);
-    fetch('/api/guestbook', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ author: name, content: message, color_index: color })
-    }).then(() => {
-        loadGuestbook();
-        this.reset();
-    });
+    const newMessage = { author: name, content: message, color_index: color };
+    let messages = JSON.parse(localStorage.getItem('guestbook') || '[]');
+    messages.push(newMessage);
+    localStorage.setItem('guestbook', JSON.stringify(messages));
+    loadGuestbook();
+    this.reset();
 });
 
 // 카카오 공유
