@@ -50,52 +50,48 @@
     <!-- 연락처 섹션 -->
     <section id="contact" class="section">
         <h2>연락처</h2>
-        <p class="section-note">신랑/신부 연락처는 카드를 클릭하세요 <!-- (수정) 연락처 정보는 js/script.js openContactModal 함수에서 수정 --> </p>
+        <p class="section-note">아래에서 각 연락처를 바로 확인하고 전화할 수 있습니다. 번호만 바꾸면 바로 반영됩니다.</p>
         <div class="contact-grid">
             <div class="contact-group">
                 <p class="group-label">신랑</p>
-                <div class="contact-card" onclick="callOrMessage('010-1234-5678')">
-                    <strong>조현진</strong>
-                    <div class="contact-icons">
-                        <a href="tel:010-1234-5678" onclick="event.stopPropagation()">📞</a>
-                    </div>
+                <div class="contact-card">
+                    <p class="contact-role">신랑</p>
+                    <strong class="contact-name">조현진</strong>
+                    <a class="contact-number" href="tel:010-1234-5678">010-1234-5678</a>
+                    <a class="contact-action" href="tel:010-1234-5678">전화하기</a>
                 </div>
-                <div class="contact-card" onclick="callOrMessage('010-1111-2222')">
-                    <strong>아버지</strong>
-                    <p style="font-size:0.85rem; margin-top:4px;">조성관</p>
-                    <div class="contact-icons">
-                        <a href="tel:010-1111-2222" onclick="event.stopPropagation()">📞</a>
-                    </div>
+                <div class="contact-card">
+                    <p class="contact-role">신랑 아버지</p>
+                    <strong class="contact-name">조성관</strong>
+                    <a class="contact-number" href="tel:010-1111-2222">010-1111-2222</a>
+                    <a class="contact-action" href="tel:010-1111-2222">전화하기</a>
                 </div>
-                <div class="contact-card" onclick="callOrMessage('010-2222-3333')">
-                    <strong>어머니</strong>
-                    <p style="font-size:0.85rem; margin-top:4px;">김해숙</p>
-                    <div class="contact-icons">
-                        <a href="tel:010-2222-3333" onclick="event.stopPropagation()">📞</a>
-                    </div>
+                <div class="contact-card">
+                    <p class="contact-role">신랑 어머니</p>
+                    <strong class="contact-name">김해숙</strong>
+                    <a class="contact-number" href="tel:010-2222-3333">010-2222-3333</a>
+                    <a class="contact-action" href="tel:010-2222-3333">전화하기</a>
                 </div>
             </div>
             <div class="contact-group">
                 <p class="group-label">신부</p>
-                <div class="contact-card" onclick="callOrMessage('010-9876-5432')">
-                    <strong>김혜린</strong>
-                    <div class="contact-icons">
-                        <a href="tel:010-9876-5432" onclick="event.stopPropagation()">📞</a>
-                    </div>
+                <div class="contact-card">
+                    <p class="contact-role">신부</p>
+                    <strong class="contact-name">김혜린</strong>
+                    <a class="contact-number" href="tel:010-9876-5432">010-9876-5432</a>
+                    <a class="contact-action" href="tel:010-9876-5432">전화하기</a>
                 </div>
-                <div class="contact-card" onclick="callOrMessage('010-3333-4444')">
-                    <strong>아버지</strong>
-                    <p style="font-size:0.85rem; margin-top:4px;">김영식</p>
-                    <div class="contact-icons">
-                        <a href="tel:010-3333-4444" onclick="event.stopPropagation()">📞</a>
-                    </div>
+                <div class="contact-card">
+                    <p class="contact-role">신부 아버지</p>
+                    <strong class="contact-name">김영식</strong>
+                    <a class="contact-number" href="tel:010-3333-4444">010-3333-4444</a>
+                    <a class="contact-action" href="tel:010-3333-4444">전화하기</a>
                 </div>
-                <div class="contact-card" onclick="callOrMessage('010-4444-5555')">
-                    <strong>어머니</strong>
-                    <p style="font-size:0.85rem; margin-top:4px;">박종옥</p>
-                    <div class="contact-icons">
-                        <a href="tel:010-4444-5555" onclick="event.stopPropagation()">📞</a>
-                    </div>
+                <div class="contact-card">
+                    <p class="contact-role">신부 어머니</p>
+                    <strong class="contact-name">박종옥</strong>
+                    <a class="contact-number" href="tel:010-4444-5555">010-4444-5555</a>
+                    <a class="contact-action" href="tel:010-4444-5555">전화하기</a>
                 </div>
             </div>
         </div>
