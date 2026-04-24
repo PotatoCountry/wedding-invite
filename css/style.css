@@ -252,14 +252,21 @@ body {
     border: none;
     background: transparent;
     color: #111;
-    font-size: 1.55rem;
-    line-height: 1;
     cursor: pointer;
     padding: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-button:hover {
-    color: #b48f95;
+    color: #111;
+}
+
+.icon-button svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
 }
 
 @media (max-width: 420px) {
