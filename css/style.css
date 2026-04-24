@@ -200,7 +200,7 @@ body {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 36px;
     width: 100%;
     max-width: 520px;
 }
@@ -208,43 +208,24 @@ body {
 .contact-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 34px;
 }
 
 .group-label {
-    font-weight: 700;
+    font-weight: 400;
     color: #191919;
     text-align: center;
-    font-size: 1.25rem;
-    margin-bottom: 10px;
+    font-size: 1.55rem;
+    margin-bottom: 4px;
+    font-family: 'Gowun Batang', serif;
 }
 
-.contact-card {
-    background: white;
-    border: 1px solid #ece7e2;
-    padding: 24px 18px;
-    border-radius: 24px;
-    transition: all 0.2s ease;
+.contact-person {
     text-align: center;
-    min-height: 138px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 10px 24px rgba(20,20,20,0.04);
-}
-
-.contact-card:hover {
-    border-color: #e3d2d2;
-    background: #fffdfc;
-    box-shadow: 0 16px 30px rgba(20,20,20,0.08);
-}
-
-.contact-card strong {
-    display: block;
-    color: #191919;
-    font-size: 1.28rem;
 }
 
 .contact-role {
@@ -256,47 +237,47 @@ body {
 
 .contact-name {
     line-height: 1.3;
+    color: #111;
+    font-size: 1.15rem;
 }
 
-.contact-number {
-    color: #474a37;
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-}
-
-.contact-action {
-    display: inline-flex;
+.contact-actions {
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 102px;
-    padding: 10px 16px;
-    border-radius: 999px;
-    background: #e98ca0;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 10px 20px rgba(233, 140, 160, 0.24);
+    gap: 12px;
 }
 
-.contact-action:hover {
-    background: #dc7f93;
+.icon-button {
+    border: none;
+    background: transparent;
+    color: #111;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.icon-button:hover {
+    color: #b48f95;
 }
 
 @media (max-width: 420px) {
     .contact-grid {
-        gap: 14px;
+        gap: 22px;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .contact-card {
-        min-height: 138px;
-        padding: 16px 12px;
+    .contact-group {
+        gap: 24px;
     }
 
-    .contact-action {
-        width: 100%;
+    .group-label {
+        font-size: 1.3rem;
+    }
+
+    .contact-name {
+        font-size: 1.02rem;
     }
 }
 
@@ -593,6 +574,91 @@ body {
     gap: 12px;
     margin: 22px 0 12px;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.account-list {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.account-item {
+    border: 1px solid #eee7e2;
+    border-radius: 22px;
+    background: white;
+    padding: 18px 20px;
+    box-shadow: 0 10px 24px rgba(20,20,20,0.03);
+}
+
+.account-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.account-label {
+    color: #b48f95;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.account-text {
+    color: #161616;
+    line-height: 1.7;
+    font-size: 1.04rem;
+}
+
+.text-button {
+    border: 1px solid #e4d9d2;
+    background: #f9f5f1;
+    color: #222;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.text-button:hover {
+    background: #f1e7de;
+}
+
+.contact-modal-content {
+    width: min(90%, 360px);
+    text-align: center;
+    border-radius: 24px;
+}
+
+.contact-modal-role {
+    color: #b48f95;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+}
+
+.contact-modal-name {
+    font-size: 1.5rem;
+    color: #111;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contact-modal-number {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
 }
 

@@ -50,51 +50,53 @@
     <!-- 연락처 섹션 -->
     <section id="contact" class="section">
         <h2>연락처</h2>
-        <p class="section-note">카드를 누르면 번호를 확인할 수 있고, 전화 아이콘을 누르면 바로 통화 화면으로 연결됩니다.</p>
+        <p class="section-note">전화 아이콘을 누르면 번호를 확인하고, 바로 전화하거나 복사할 수 있습니다.</p>
         <div class="contact-grid">
             <div class="contact-group">
                 <p class="group-label">신랑</p>
-                <div class="contact-card" onclick="callOrMessage('010-9040-8146')">
-                    <strong>조현진</strong>
-                    <div class="contact-icons">
-                        <a href="tel:010-9040-8146" onclick="event.stopPropagation()">📞</a>
+                <div class="contact-person">
+                    <p class="contact-role">신랑</p>
+                    <strong class="contact-name">조현진</strong>
+                    <div class="contact-actions">
+                        <button type="button" class="icon-button" onclick="openContactModal('신랑', '조현진', '010-9040-8146')">☎</button>
                     </div>
                 </div>
-                <div class="contact-card" onclick="callOrMessage('010-7309-8146')">
-                    <strong>아버지</strong>
-                    <p style="font-size:0.85rem; margin-top:4px;">조성관</p>
-                    <div class="contact-icons">
-                        <a href="tel:010-7309-8146" onclick="event.stopPropagation()">📞</a>
+                <div class="contact-person">
+                    <p class="contact-role">신랑 아버지</p>
+                    <strong class="contact-name">조성관</strong>
+                    <div class="contact-actions">
+                        <button type="button" class="icon-button" onclick="openContactModal('신랑 아버지', '조성관', '010-7309-8146')">☎</button>
                     </div>
                 </div>
-                <div class="contact-card" onclick="callOrMessage('010-5376-8146')">
-                    <strong>어머니</strong>
-                    <p style="font-size:0.85rem; margin-top:4px;">김해숙</p>
-                    <div class="contact-icons">
-                        <a href="tel:010-5376-8146" onclick="event.stopPropagation()">📞</a>
+                <div class="contact-person">
+                    <p class="contact-role">신랑 어머니</p>
+                    <strong class="contact-name">김해숙</strong>
+                    <div class="contact-actions">
+                        <button type="button" class="icon-button" onclick="openContactModal('신랑 어머니', '김해숙', '010-5376-8146')">☎</button>
                     </div>
                 </div>
             </div>
             <div class="contact-group">
                 <p class="group-label">신부</p>
-                <div class="contact-card" onclick="callOrMessage('010-2294-1545')">
-                    <strong>김혜린</strong>
-                    <div class="contact-icons">
-                        <a href="tel:010-2294-1545" onclick="event.stopPropagation()">📞</a>
+                <div class="contact-person">
+                    <p class="contact-role">신부</p>
+                    <strong class="contact-name">김혜린</strong>
+                    <div class="contact-actions">
+                        <button type="button" class="icon-button" onclick="openContactModal('신부', '김혜린', '010-2294-1545')">☎</button>
                     </div>
                 </div>
-                <div class="contact-card" onclick="callOrMessage('010-3333-4444')">
-                    <strong>아버지</strong>
-                    <p style="font-size:0.85rem; margin-top:4px;">김영식</p>
-                    <div class="contact-icons">
-                        <a href="tel:010-3333-4444" onclick="event.stopPropagation()">📞</a>
+                <div class="contact-person">
+                    <p class="contact-role">신부 아버지</p>
+                    <strong class="contact-name">김영식</strong>
+                    <div class="contact-actions">
+                        <button type="button" class="icon-button" onclick="openContactModal('신부 아버지', '김영식', '010-8258-1545')">☎</button>
                     </div>
                 </div>
-                <div class="contact-card" onclick="callOrMessage('010-4444-5555')">
-                    <strong>어머니</strong>
-                    <p style="font-size:0.85rem; margin-top:4px;">박종옥</p>
-                    <div class="contact-icons">
-                        <a href="tel:010-4444-5555" onclick="event.stopPropagation()">📞</a>
+                <div class="contact-person">
+                    <p class="contact-role">신부 어머니</p>
+                    <strong class="contact-name">박종옥</strong>
+                    <div class="contact-actions">
+                        <button type="button" class="icon-button" onclick="openContactModal('신부 어머니', '박종옥', '010-2284-1545')">☎</button>
                     </div>
                 </div>
             </div>
@@ -160,7 +162,6 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="map-buttons">
-                <a href="nmap://search?query=%EC%98%88%EC%88%98%EC%9E%AC%EB%A6%BC%EA%B5%90%20%EC%B2%AD%EB%9F%89%EB%A6%AC%EA%B5%90%ED%9A%8C&appname=https%3A%2F%2Fpotatocountry.github.io%2Fwedding-invite" class="btn">네이버앱</a>
                 <a href="https://map.naver.com/p/search/%EC%98%88%EC%88%98%EC%9E%AC%EB%A6%BC%EA%B5%90%20%EC%B2%AD%EB%9F%89%EB%A6%AC%EA%B5%90%ED%9A%8C" class="btn" target="_blank" rel="noopener noreferrer">네이버지도</a>
                 <a href="https://map.kakao.com/link/search/%EC%98%88%EC%88%98%EC%9E%AC%EB%A6%BC%EA%B5%90%20%EC%B2%AD%EB%9F%89%EB%A6%AC%EA%B5%90%ED%9A%8C" class="btn" target="_blank" rel="noopener noreferrer">카카오맵</a>
             </div>
@@ -192,35 +193,35 @@
     <!-- 축의금 계좌 -->
     <section id="account" class="section">
         <h2>축의금 계좌</h2>
-        <p class="section-note">아래 내용을 수정하면 계좌 정보가 바로 반영됩니다. <!-- (수정) 계좌 정보는 각각 아래 p 태그 안에 입력 --> </p>
-        <div class="accordion">
-            <div class="accordion-item">
-                <button class="accordion-header">신랑측 아버지 계좌</button>
-                <div class="accordion-content">
-                    <p>신한은행 000-000-000000 예금주 조성관 <!-- (수정) 신랑측 아버지 계좌 --> </p>
-                    <button onclick="copyAccount('신한은행 000-000-000000 예금주 조성관')">복사</button>
+        <p class="section-note">나중에 계좌만 채워 넣으면 바로 사용할 수 있도록 깔끔한 형식으로 정리해두었습니다.</p>
+        <div class="account-list">
+            <div class="account-item">
+                <div class="account-head">
+                    <p class="account-label">신랑측 아버지</p>
+                    <button type="button" class="text-button" onclick="copyAccount('신한은행 000-000-000000 예금주 조성관')">복사</button>
                 </div>
+                <p class="account-text">신한은행 000-000-000000 예금주 조성관</p>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-header">신랑측 어머니 계좌</button>
-                <div class="accordion-content">
-                    <p>국민은행 000-000-000000 예금주 김해숙 <!-- (수정) 신랑측 어머니 계좌 --> </p>
-                    <button onclick="copyAccount('국민은행 000-000-000000 예금주 김해숙')">복사</button>
+            <div class="account-item">
+                <div class="account-head">
+                    <p class="account-label">신랑측 어머니</p>
+                    <button type="button" class="text-button" onclick="copyAccount('국민은행 000-000-000000 예금주 김해숙')">복사</button>
                 </div>
+                <p class="account-text">국민은행 000-000-000000 예금주 김해숙</p>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-header">신부측 아버지 계좌</button>
-                <div class="accordion-content">
-                    <p>농협 000-000-000000 예금주 김영식 <!-- (수정) 신부측 아버지 계좌 --> </p>
-                    <button onclick="copyAccount('농협 000-000-000000 예금주 김영식')">복사</button>
+            <div class="account-item">
+                <div class="account-head">
+                    <p class="account-label">신부측 아버지</p>
+                    <button type="button" class="text-button" onclick="copyAccount('농협 000-000-000000 예금주 김영식')">복사</button>
                 </div>
+                <p class="account-text">농협 000-000-000000 예금주 김영식</p>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-header">신부측 어머니 계좌</button>
-                <div class="accordion-content">
-                    <p>우리은행 000-000-000000 예금주 박종옥 <!-- (수정) 신부측 어머니 계좌 --> </p>
-                    <button onclick="copyAccount('우리은행 000-000-000000 예금주 박종옥')">복사</button>
+            <div class="account-item">
+                <div class="account-head">
+                    <p class="account-label">신부측 어머니</p>
+                    <button type="button" class="text-button" onclick="copyAccount('우리은행 000-000-000000 예금주 박종옥')">복사</button>
                 </div>
+                <p class="account-text">우리은행 000-000-000000 예금주 박종옥</p>
             </div>
         </div>
     </section>
@@ -241,6 +242,19 @@
                 <button class="gallery-nav prev" onclick="changeGalleryImage(-1)">◀</button>
                 <img id="gallery-viewer-image" src="" alt="큰 이미지 보기">
                 <button class="gallery-nav next" onclick="changeGalleryImage(1)">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content contact-modal-content">
+            <span class="close" onclick="closeModal('contact-modal')">&times;</span>
+            <p id="contact-modal-role" class="contact-modal-role"></p>
+            <p id="contact-modal-name" class="contact-modal-name"></p>
+            <p id="contact-modal-number" class="contact-modal-number"></p>
+            <div class="contact-modal-actions">
+                <button type="button" class="btn" onclick="copyContactNumber()">번호 복사</button>
+                <a id="contact-modal-call" class="btn" href="#">전화하기</a>
             </div>
         </div>
     </div>

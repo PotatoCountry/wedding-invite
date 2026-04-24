@@ -10,13 +10,22 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 60000); // 1분마다 업데이트
 
-function callOrMessage(number) {
-    const normalizedNumber = String(number).replace(/[^0-9+]/g, '');
-    const shouldCall = window.confirm(`${number}\n\n전화 앱으로 연결할까요?`);
+let activeContactNumber = '';
 
-    if (shouldCall) {
-        window.location.href = `tel:${normalizedNumber}`;
-    }
+function openContactModal(role, name, number) {
+    activeContactNumber = String(number);
+    document.getElementById('contact-modal-role').textContent = role;
+    document.getElementById('contact-modal-name').textContent = name;
+    document.getElementById('contact-modal-number').textContent = number;
+    document.getElementById('contact-modal-call').href = `tel:${number.replace(/[^0-9+]/g, '')}`;
+    document.getElementById('contact-modal').style.display = 'block';
+}
+
+function copyContactNumber() {
+    if (!activeContactNumber) return;
+    navigator.clipboard.writeText(activeContactNumber).then(() => {
+        alert('전화번호가 복사되었습니다!');
+    });
 }
 
 // 계좌 복사
@@ -25,14 +34,6 @@ function copyAccount(account) {
         alert("계좌번호가 복사되었습니다!");
     });
 }
-
-// 아코디언
-document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-        const content = button.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    });
-});
 
 // 모달
 function closeModal(modalId) {
