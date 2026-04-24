@@ -7,26 +7,25 @@
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: #474a37;
-    background-image: radial-gradient(circle, #d8e592 1px, transparent 1px);
-    background-size: 20px 20px;
-    color: #333;
-    max-width: 480px;
+    background: #2d2d2d;
+    color: #222;
+    max-width: 660px;
     margin: 0 auto;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    box-shadow: 0 0 35px rgba(0,0,0,0.22);
     min-height: 100vh;
 }
 
 .section {
-    padding: 30px 20px;
+    padding: 56px 34px;
     min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgba(255,255,255,0.9);
-    margin: 10px;
-    border-radius: 10px;
+    background: #f9f8f6;
+    margin: 0;
+    border-radius: 0;
+    position: relative;
 }
 
 #hero.section {
@@ -61,25 +60,23 @@ body {
 
 .section h2 {
     font-family: 'Gowun Batang', serif;
-    color: #474a37;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
+    color: #191919;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 /* 섹션 구분선 */
 .section-divider {
-    text-align: center;
-    font-size: 24px;
-    color: #d8e592;
-    margin: 20px 0;
+    display: none;
 }
 
 /* 히어로 */
 .hero {
-    background: linear-gradient(rgba(71,74,55,0.35), rgba(71,74,55,0.35)), url('../images/wedding01.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(34,34,34,0.16), rgba(34,34,34,0.16)), url('../images/wedding01.jpg') center/cover no-repeat;
     position: relative;
     color: white;
-    min-height: 60vh;
+    min-height: 72vh;
     display: flex;
     align-items: center;
 }
@@ -91,14 +88,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(71,74,55,0.45);
+    background: linear-gradient(to bottom, rgba(20,20,20,0.12), rgba(20,20,20,0.32));
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
     width: 100%;
-    padding: 60px 20px 40px;
+    padding: 88px 32px 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,22 +108,23 @@ body {
 }
 
 .hero-copy h1 {
-    font-size: 2.2rem;
-    margin-bottom: 12px;
+    font-size: 2.9rem;
+    margin-bottom: 18px;
+    font-weight: 400;
 }
 
 .hero-copy p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #f2f2de;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.92);
 }
 
 .hero-label {
-    letter-spacing: 0.2em;
+    letter-spacing: 0.34em;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    margin-bottom: 10px;
-    color: #d8e592;
+    font-size: 0.78rem;
+    margin-bottom: 16px;
+    color: #e3c1c1;
 }
 
 .scroll-indicator {
@@ -136,7 +134,7 @@ body {
 .bounce {
     width: 20px;
     height: 30px;
-    border: 2px solid #d8e592;
+    border: 1px solid rgba(255,255,255,0.75);
     border-radius: 10px;
     position: relative;
     animation: bounce 2s infinite;
@@ -146,7 +144,7 @@ body {
     content: '';
     width: 4px;
     height: 8px;
-    background: #d8e592;
+    background: rgba(255,255,255,0.82);
     position: absolute;
     top: 4px;
     left: 50%;
@@ -162,45 +160,49 @@ body {
 
 /* 초대장 카드 */
 .invitation-card {
-    background: rgba(255,255,255,0.95);
-    padding: 30px;
-    border-radius: 15px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: none;
+    max-width: 520px;
 }
 
 .parents p {
-    font-size: 16px;
-    margin: 10px 0;
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #555;
 }
 
 .stars {
-    font-size: 20px;
-    color: #d8e592;
-    margin: 20px 0;
+    font-size: 0.88rem;
+    color: #d2a9a9;
+    margin: 34px 0 26px;
+    letter-spacing: 0.3em;
 }
 
 .message p {
     font-family: 'Gowun Batang', serif;
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 15px 0;
+    font-size: 1.5rem;
+    line-height: 1.9;
+    margin: 16px 0;
+    color: #121212;
 }
 
 .couple p {
-    font-size: 20px;
-    font-weight: bold;
-    color: #474a37;
-    margin-top: 20px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #222;
+    margin-top: 34px;
 }
 
 /* 연락처 */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 18px;
     width: 100%;
-    max-width: 380px;
+    max-width: 520px;
 }
 
 .contact-group {
@@ -211,43 +213,45 @@ body {
 
 .group-label {
     font-weight: 700;
-    color: #474a37;
+    color: #191919;
     text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
 }
 
 .contact-card {
     background: white;
-    border: 1.5px solid #e0e0d0;
-    padding: 18px 14px;
-    border-radius: 10px;
+    border: 1px solid #ece7e2;
+    padding: 24px 18px;
+    border-radius: 24px;
     transition: all 0.2s ease;
     text-align: center;
-    min-height: 150px;
+    min-height: 138px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    box-shadow: 0 10px 24px rgba(20,20,20,0.04);
 }
 
 .contact-card:hover {
-    border-color: #d8e592;
-    background: #fafaf5;
-    box-shadow: 0 2px 8px rgba(216,229,146,0.15);
+    border-color: #e3d2d2;
+    background: #fffdfc;
+    box-shadow: 0 16px 30px rgba(20,20,20,0.08);
 }
 
 .contact-card strong {
     display: block;
-    color: #474a37;
-    font-size: 1.1rem;
+    color: #191919;
+    font-size: 1.28rem;
 }
 
 .contact-role {
-    color: #6f7358;
-    font-size: 0.9rem;
+    color: #b48f95;
+    font-size: 0.88rem;
     font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
 .contact-name {
@@ -266,19 +270,19 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 92px;
-    padding: 8px 14px;
+    min-width: 102px;
+    padding: 10px 16px;
     border-radius: 999px;
-    background: #f04d91;
+    background: #e98ca0;
     color: white;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 6px 14px rgba(240, 77, 145, 0.18);
+    box-shadow: 0 10px 20px rgba(233, 140, 160, 0.24);
 }
 
 .contact-action:hover {
-    background: #dc3d83;
+    background: #dc7f93;
 }
 
 @media (max-width: 420px) {
@@ -340,11 +344,12 @@ body {
 }
 
 .section-note {
-    color: #6a6a4f;
-    margin-bottom: 15px;
+    color: #7b7471;
+    margin-bottom: 22px;
     text-align: center;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 0.98rem;
+    line-height: 1.8;
+    max-width: 520px;
 }
 
 .gallery-modal-content {
@@ -385,20 +390,20 @@ body {
 
 .calendar {
     width: 100%;
-    max-width: 400px;
+    max-width: 520px;
     background: rgba(255,255,255,0.95);
-    border-radius: 24px;
-    padding: 26px 20px 22px;
-    margin-top: 18px;
-    box-shadow: 0 14px 35px rgba(71,74,55,0.08);
-    border: 1px solid rgba(224, 214, 214, 0.8);
+    border-radius: 32px;
+    padding: 34px 28px 28px;
+    margin-top: 24px;
+    box-shadow: 0 18px 35px rgba(30,30,30,0.05);
+    border: 1px solid #efe8e3;
 }
 
 .calendar-header {
     text-align: center;
     font-weight: 700;
-    margin-bottom: 18px;
-    color: #8f7676;
+    margin-bottom: 24px;
+    color: #c39b9b;
     letter-spacing: 0.24em;
     font-size: 0.82rem;
 }
@@ -448,33 +453,34 @@ body {
 }
 
 .calendar-label {
-    color: #c89b9b;
+    color: #d0a1a8;
     letter-spacing: 0.32em;
     font-size: 0.9rem;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
 }
 
 .date-summary {
-    font-size: 1.55rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
     color: #181818;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 .date-venue {
-    font-size: 1.15rem;
+    font-size: 1.28rem;
     font-weight: 700;
     text-align: center;
     color: #181818;
-    margin-top: 12px;
+    margin-top: 14px;
 }
 
 #date h2 {
     font-size: 1.2rem;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    color: #7a726d;
 }
 
 .wedding-day {
@@ -536,12 +542,12 @@ body {
 /* 오시는 길 */
 .map-container {
     width: 100%;
-    max-width: 410px;
+    max-width: 520px;
 }
 
 .location-address {
     text-align: center;
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #181818;
     line-height: 1.7;
@@ -549,10 +555,11 @@ body {
 
 .location-place {
     text-align: center;
-    font-size: 1.05rem;
-    color: #7d6d6d;
-    margin-top: 6px;
+    font-size: 1.12rem;
+    color: #b48f95;
+    margin-top: 8px;
     font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
 .location-note,
@@ -563,28 +570,28 @@ body {
 }
 
 .location-note {
-    margin-top: 14px;
+    margin-top: 18px;
 }
 
 .map-preview {
-    margin-top: 18px;
-    border-radius: 22px;
+    margin-top: 24px;
+    border-radius: 30px;
     overflow: hidden;
-    border: 1px solid #eadfdf;
+    border: 1px solid #ece5e0;
     background: #f7f2ef;
-    box-shadow: 0 14px 28px rgba(71,74,55,0.08);
+    box-shadow: 0 18px 35px rgba(30,30,30,0.05);
 }
 
 .map-preview iframe {
     width: 100%;
-    height: 320px;
+    height: 360px;
     border: 0;
 }
 
 .map-buttons {
     display: flex;
-    gap: 10px;
-    margin: 16px 0 10px;
+    gap: 12px;
+    margin: 22px 0 12px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -688,17 +695,20 @@ body {
 
 /* 버튼 */
 .btn {
-    background: #d8e592;
-    color: #474a37;
+    background: #f2ece7;
+    color: #222;
     border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 12px 22px;
+    border-radius: 999px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s ease;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(30,30,30,0.05);
 }
 
 .btn:hover {
-    background: #c4d47f;
+    background: #eadfd7;
+    transform: translateY(-1px);
 }
 
 /* 폼 */
@@ -736,6 +746,20 @@ body {
     .section {
         margin: 0;
         border-radius: 0;
+        padding: 42px 20px;
+    }
+    .hero-content {
+        padding: 72px 20px 40px;
+    }
+    .hero-copy h1 {
+        font-size: 2.2rem;
+    }
+    .message p {
+        font-size: 1.18rem;
+    }
+    .location-address,
+    .date-summary {
+        font-size: 1.4rem;
     }
 }
 
@@ -745,7 +769,7 @@ body {
         font-size: 2em;
     }
     .section {
-        padding: 20px 10px;
+        padding: 30px 18px;
     }
     .gallery img {
         max-width: 250px;
