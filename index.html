@@ -6,7 +6,7 @@
     <title>조현진 ♥ 김혜린 결혼합니다</title>
     <meta property="og:title" content="조현진 ♥ 김혜린 결혼합니다">
     <meta property="og:description" content="2026년 6월 28일, 사랑의 결실을 맺습니다.">
-    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:image" content="images/wedding01.jpg">
     <meta property="og:url" content="https://potatocountry.github.io/wedding-invite">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Gowun+Batang&display=swap" rel="stylesheet">
@@ -15,6 +15,11 @@
     <!-- 히어로 섹션 -->
     <section id="hero" class="section hero">
         <div class="hero-content">
+            <div class="hero-copy">
+                <p class="hero-label">결혼식 초대</p>
+                <h1>조현진 ♥ 김혜린</h1>
+                <p class="hero-sub">2026년 6월 28일 토요일, 사랑의 시작을 함께해주세요.</p>
+            </div>
             <div class="scroll-indicator">
                 <div class="bounce"></div>
             </div>
@@ -26,8 +31,8 @@
     <section id="invitation" class="section">
         <div class="invitation-card">
             <div class="parents">
-                <p><조성관>·<김해숙>의 장남 <조현진></p>
-                <p><김영식>·<박종옥>의 장녀 <김혜린></p>
+                <p><조성관>·<김해숙>의 장남 <조현진> <!-- (수정) 신랑 가족 이름 --> </p>
+                <p><김영식>·<박종옥>의 장녀 <김혜린> <!-- (수정) 신부 가족 이름 --> </p>
             </div>
             <div class="stars">✦ ✦ ✦</div>
             <div class="message">
@@ -45,9 +50,54 @@
     <!-- 연락처 섹션 -->
     <section id="contact" class="section">
         <h2>연락처</h2>
-        <div class="contact-buttons">
-            <button class="btn contact-btn" onclick="openContactModal('groom')">신랑측 연락하기</button>
-            <button class="btn contact-btn" onclick="openContactModal('bride')">신부측 연락하기</button>
+        <p class="section-note">신랑/신부 연락처는 카드를 클릭하세요 <!-- (수정) 연락처 정보는 js/script.js openContactModal 함수에서 수정 --> </p>
+        <div class="contact-grid">
+            <div class="contact-group">
+                <p class="group-label">신랑</p>
+                <div class="contact-card" onclick="callOrMessage('010-1234-5678')">
+                    <strong>조현진</strong>
+                    <div class="contact-icons">
+                        <a href="tel:010-1234-5678" onclick="event.stopPropagation()">📞</a>
+                    </div>
+                </div>
+                <div class="contact-card" onclick="callOrMessage('010-1111-2222')">
+                    <strong>아버지</strong>
+                    <p style="font-size:0.85rem; margin-top:4px;">조성관</p>
+                    <div class="contact-icons">
+                        <a href="tel:010-1111-2222" onclick="event.stopPropagation()">📞</a>
+                    </div>
+                </div>
+                <div class="contact-card" onclick="callOrMessage('010-2222-3333')">
+                    <strong>어머니</strong>
+                    <p style="font-size:0.85rem; margin-top:4px;">김해숙</p>
+                    <div class="contact-icons">
+                        <a href="tel:010-2222-3333" onclick="event.stopPropagation()">📞</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-group">
+                <p class="group-label">신부</p>
+                <div class="contact-card" onclick="callOrMessage('010-9876-5432')">
+                    <strong>김혜린</strong>
+                    <div class="contact-icons">
+                        <a href="tel:010-9876-5432" onclick="event.stopPropagation()">📞</a>
+                    </div>
+                </div>
+                <div class="contact-card" onclick="callOrMessage('010-3333-4444')">
+                    <strong>아버지</strong>
+                    <p style="font-size:0.85rem; margin-top:4px;">김영식</p>
+                    <div class="contact-icons">
+                        <a href="tel:010-3333-4444" onclick="event.stopPropagation()">📞</a>
+                    </div>
+                </div>
+                <div class="contact-card" onclick="callOrMessage('010-4444-5555')">
+                    <strong>어머니</strong>
+                    <p style="font-size:0.85rem; margin-top:4px;">박종옥</p>
+                    <div class="contact-icons">
+                        <a href="tel:010-4444-5555" onclick="event.stopPropagation()">📞</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <div class="section-divider">★</div>
@@ -55,11 +105,16 @@
     <!-- 포토 갤러리 -->
     <section id="gallery" class="section">
         <h2>갤러리</h2>
-        <div class="gallery-carousel">
-            <img src="images/갤러리1.jpg" alt="갤러리 1">
-            <img src="images/갤러리2.jpg" alt="갤러리 2">
-            <img src="images/갤러리3.jpg" alt="갤러리 3">
+        <p class="section-note">images 폴더에 사진을 넣고 파일명만 바꾸면 됩니다. 아래는 샘플 6장입니다. <!-- (수정) gallery 이미지 파일명은 여기서 설정 --> </p>
+        <div class="gallery-grid">
+            <img src="images/wedding01.jpg" alt="갤러리 1">
+            <img src="images/wedding02.jpg" alt="갤러리 2">
+            <img src="images/wedding03.jpg" alt="갤러리 3">
+            <img src="images/wedding04.jpg" alt="갤러리 4">
+            <img src="images/wedding01.jpg" alt="갤러리 5">
+            <img src="images/wedding02.jpg" alt="갤러리 6">
         </div>
+        <p class="gallery-note">클릭하면 큰 이미지 보기가 열립니다. 이미지 파일명만 바꾸세요. <!-- (수정) gallery 이미지 파일명 --> </p>
     </section>
     <div class="section-divider">★</div>
 
@@ -67,16 +122,16 @@
     <section id="date" class="section">
         <h2>조현진 ❤️ 김혜린의 결혼식이 <span id="countdown"></span>일 남았습니다</h2>
         <div class="calendar">
-            <!-- 간단한 달력 위젯 -->
             <div class="calendar-header">2026년 6월</div>
             <div class="calendar-days">
                 <div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div>
-                <!-- 날짜들 -->
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                <div class="highlight">28</div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+                <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+                <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div>
+                <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
+                <div>27</div><div class="highlight">28</div><div>29</div><div>30</div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
             </div>
         </div>
     </section>
@@ -87,7 +142,7 @@
         <h2>오시는 길</h2>
         <div class="map-container">
             <img src="images/map.jpg" alt="지도">
-            <p>서울 동대문구 약령시로 21길 25</p>
+            <p>서울 동대문구 약령시로 21길 25 <!-- (수정) 예식장 주소 --> </p>
             <div class="map-buttons">
                 <a href="https://map.kakao.com/link/to/청량리교회" class="btn">카카오맵</a>
                 <a href="https://map.naver.com/v5/search/청량리교회" class="btn">네이버지도</a>
@@ -103,15 +158,15 @@
         <div class="venue-cards">
             <div class="venue-card">
                 <img src="images/안내1.jpg" alt="안내1">
-                <p>안내1 내용</p>
+                <p> 예식장 안내 내용 입력 <!-- (수정) 예식장 안내 텍스트 --> </p>
             </div>
             <div class="venue-card">
                 <img src="images/안내2.jpg" alt="안내2">
-                <p>안내2 내용</p>
+                <p>안내2 내용 <!-- (수정) 예식장 안내 텍스트 --> </p>
             </div>
             <div class="venue-card">
                 <img src="images/안내3.jpg" alt="안내3">
-                <p>안내3 내용</p>
+                <p>안내3 내용 <!-- (수정) 예식장 안내 텍스트 --> </p>
             </div>
         </div>
     </section>
@@ -120,44 +175,40 @@
     <!-- 축의금 계좌 -->
     <section id="account" class="section">
         <h2>축의금 계좌</h2>
+        <p class="section-note">아래 내용을 수정하면 계좌 정보가 바로 반영됩니다. <!-- (수정) 계좌 정보는 각각 아래 p 태그 안에 입력 --> </p>
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">신랑측 계좌</button>
+                <button class="accordion-header">신랑측 아버지 계좌</button>
                 <div class="accordion-content">
-                    <p>계좌 정보</p>
-                    <button onclick="copyAccount('신랑측 계좌')">복사</button>
+                    <p>신한은행 000-000-000000 예금주 조성관 <!-- (수정) 신랑측 아버지 계좌 --> </p>
+                    <button onclick="copyAccount('신한은행 000-000-000000 예금주 조성관')">복사</button>
                 </div>
             </div>
             <div class="accordion-item">
-                <button class="accordion-header">신부측 계좌</button>
+                <button class="accordion-header">신랑측 어머니 계좌</button>
                 <div class="accordion-content">
-                    <p>계좌 정보</p>
-                    <button onclick="copyAccount('신부측 계좌')">복사</button>
+                    <p>국민은행 000-000-000000 예금주 김해숙 <!-- (수정) 신랑측 어머니 계좌 --> </p>
+                    <button onclick="copyAccount('국민은행 000-000-000000 예금주 김해숙')">복사</button>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">신부측 아버지 계좌</button>
+                <div class="accordion-content">
+                    <p>농협 000-000-000000 예금주 김영식 <!-- (수정) 신부측 아버지 계좌 --> </p>
+                    <button onclick="copyAccount('농협 000-000-000000 예금주 김영식')">복사</button>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">신부측 어머니 계좌</button>
+                <div class="accordion-content">
+                    <p>우리은행 000-000-000000 예금주 박종옥 <!-- (수정) 신부측 어머니 계좌 --> </p>
+                    <button onclick="copyAccount('우리은행 000-000-000000 예금주 박종옥')">복사</button>
                 </div>
             </div>
         </div>
     </section>
     <div class="section-divider">★</div>
 
-    <!-- 참석 여부 -->
-    <section id="rsvp" class="section">
-        <button class="btn rsvp-btn" onclick="openRsvpModal()">참석 의사 전달하기</button>
-    </section>
-    <div class="section-divider">★</div>
-
-    <!-- 축하 메시지 -->
-    <section id="guestbook" class="section">
-        <h2>축하 메시지</h2>
-        <form id="guestbook-form">
-            <input type="text" placeholder="이름" required>
-            <textarea placeholder="메시지" required></textarea>
-            <button type="submit" class="btn">남기기</button>
-        </form>
-        <div class="guestbook-posts" id="guestbook-posts">
-            <!-- 동적 메시지 -->
-        </div>
-    </section>
-    <div class="section-divider">★</div>
 
     <!-- 푸터 -->
     <footer class="footer">
@@ -166,48 +217,14 @@
     </footer>
 
     <!-- 모달들 -->
-    <div id="contact-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('contact-modal')">&times;</span>
-            <div id="contact-details"></div>
-        </div>
-    </div>
-
-    <div id="rsvp-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('rsvp-modal')">&times;</span>
-            <form id="rsvp-form">
-                <div class="form-group">
-                    <label>구분</label>
-                    <button type="button" class="toggle-btn" onclick="selectSide('groom')">신랑측</button>
-                    <button type="button" class="toggle-btn" onclick="selectSide('bride')">신부측</button>
-                </div>
-                <div class="form-group">
-                    <label>성함</label>
-                    <input type="text" placeholder="성함" required>
-                </div>
-                <div class="form-group">
-                    <label>참석 여부</label>
-                    <input type="radio" name="attendance" value="참석"> 참석
-                    <input type="radio" name="attendance" value="불참석"> 불참석
-                </div>
-                <div class="form-group">
-                    <label>참석인원</label>
-                    <input type="number" placeholder="본인 포함 총 참석인원">
-                </div>
-                <div class="form-group">
-                    <label>동행인</label>
-                    <input type="text" placeholder="함께 오시는 분 성함">
-                </div>
-                <div class="form-group">
-                    <label>식사여부</label>
-                    <input type="radio" name="meal" value="예정"> 예정
-                    <input type="radio" name="meal" value="안함"> 안함
-                    <input type="radio" name="meal" value="미정"> 미정
-                </div>
-                <button type="submit" class="btn">참석 의사 전달하기</button>
-                <label><input type="checkbox"> 오늘 하루 보지 않기</label>
-            </form>
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content gallery-modal-content">
+            <span class="close" onclick="closeModal('gallery-modal')">&times;</span>
+            <div class="gallery-viewer">
+                <button class="gallery-nav prev" onclick="changeGalleryImage(-1)">◀</button>
+                <img id="gallery-viewer-image" src="" alt="큰 이미지 보기">
+                <button class="gallery-nav next" onclick="changeGalleryImage(1)">▶</button>
+            </div>
         </div>
     </div>
 
