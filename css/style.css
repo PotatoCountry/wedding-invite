@@ -569,12 +569,44 @@ body {
     border: 0;
 }
 
+.map-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .map-buttons {
     display: flex;
     gap: 12px;
     margin: 22px 0 12px;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.traffic-list {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.traffic-item {
+    padding-top: 20px;
+    border-top: 1px dashed #e8ded8;
+}
+
+.traffic-title {
+    font-size: 1.35rem;
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.traffic-text {
+    color: #333;
+    line-height: 1.85;
+    font-size: 1rem;
+    word-break: keep-all;
 }
 
 .account-label-top {
