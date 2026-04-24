@@ -344,6 +344,7 @@ body {
     margin-bottom: 15px;
     text-align: center;
     font-size: 14px;
+    line-height: 1.6;
 }
 
 .gallery-modal-content {
@@ -383,61 +384,153 @@ body {
 }
 
 .calendar {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 24px;
+    padding: 26px 20px 22px;
+    margin-top: 18px;
+    box-shadow: 0 14px 35px rgba(71,74,55,0.08);
+    border: 1px solid rgba(224, 214, 214, 0.8);
 }
 
 .calendar-header {
     text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #474a37;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #8f7676;
+    letter-spacing: 0.24em;
+    font-size: 0.82rem;
 }
 
 .calendar-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 6px;
+    gap: 10px 4px;
 }
 
-.calendar-days div {
+.calendar-week,
+.calendar-day,
+.calendar-empty {
     text-align: center;
-    padding: 12px 0;
-    border-radius: 10px;
-    background: #f7f7e8;
-    color: #474a37;
-    font-size: 0.95rem;
-    min-height: 40px;
+    min-height: 56px;
 }
 
-.calendar-days div:nth-child(-n+7) {
+.calendar-week {
     font-weight: 700;
-    color: #5b5a40;
+    color: #202020;
+    font-size: 1.05rem;
+    min-height: auto;
+    padding-bottom: 8px;
 }
 
-.calendar-days div.empty {
-    background: transparent;
-    box-shadow: none;
+.calendar-week.sunday,
+.calendar-day.sunday {
+    color: #d6a0a8;
 }
 
-.calendar-days div.empty {
-    background: transparent;
-    box-shadow: none;
+.calendar-week.saturday,
+.calendar-day.saturday {
+    color: #202020;
 }
 
-.highlight {
-    background: #d8e592;
-    color: #474a37;
+.calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    font-size: 1.05rem;
+    position: relative;
+}
+
+.calendar-empty {
+    min-height: 56px;
+}
+
+.calendar-label {
+    color: #c89b9b;
+    letter-spacing: 0.32em;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.date-summary {
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    color: #181818;
+    margin-top: 2px;
+}
+
+.date-venue {
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: center;
+    color: #181818;
+    margin-top: 12px;
+}
+
+#date h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.wedding-day {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wedding-day .day-number {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    width: 36px;
-    height: 36px;
+    justify-content: center;
+    background: #ddb8bf;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
     margin: 0 auto;
+}
+
+.wedding-day .day-note {
+    font-size: 0.78rem;
+    color: #b18c92;
+    font-weight: 700;
+}
+
+@media (max-width: 420px) {
+    .date-summary {
+        font-size: 1.28rem;
+    }
+
+    .date-venue {
+        font-size: 1.02rem;
+    }
+
+    .calendar {
+        padding: 22px 14px 18px;
+    }
+
+    .calendar-week,
+    .calendar-day,
+    .calendar-empty {
+        min-height: 48px;
+        font-size: 0.98rem;
+    }
+
+    .wedding-day .day-number {
+        width: 42px;
+        height: 42px;
+        font-size: 1.05rem;
+    }
+
+    .wedding-day .day-note {
+        font-size: 0.72rem;
+    }
 }
 
 /* 오시는 길 */

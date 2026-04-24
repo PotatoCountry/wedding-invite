@@ -50,48 +50,52 @@
     <!-- 연락처 섹션 -->
     <section id="contact" class="section">
         <h2>연락처</h2>
-        <p class="section-note">아래에서 각 연락처를 바로 확인하고 전화할 수 있습니다. 번호만 바꾸면 바로 반영됩니다.</p>
+        <p class="section-note">카드를 누르면 번호를 확인할 수 있고, 전화 아이콘을 누르면 바로 통화 화면으로 연결됩니다.</p>
         <div class="contact-grid">
             <div class="contact-group">
                 <p class="group-label">신랑</p>
-                <div class="contact-card">
-                    <p class="contact-role">신랑</p>
-                    <strong class="contact-name">조현진</strong>
-                    <a class="contact-number" href="tel:010-1234-5678">010-1234-5678</a>
-                    <a class="contact-action" href="tel:010-1234-5678">전화하기</a>
+                <div class="contact-card" onclick="callOrMessage('010-9040-8146')">
+                    <strong>조현진</strong>
+                    <div class="contact-icons">
+                        <a href="tel:010-9040-8146" onclick="event.stopPropagation()">📞</a>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <p class="contact-role">신랑 아버지</p>
-                    <strong class="contact-name">조성관</strong>
-                    <a class="contact-number" href="tel:010-1111-2222">010-1111-2222</a>
-                    <a class="contact-action" href="tel:010-1111-2222">전화하기</a>
+                <div class="contact-card" onclick="callOrMessage('010-7309-8146')">
+                    <strong>아버지</strong>
+                    <p style="font-size:0.85rem; margin-top:4px;">조성관</p>
+                    <div class="contact-icons">
+                        <a href="tel:010-7309-8146" onclick="event.stopPropagation()">📞</a>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <p class="contact-role">신랑 어머니</p>
-                    <strong class="contact-name">김해숙</strong>
-                    <a class="contact-number" href="tel:010-2222-3333">010-2222-3333</a>
-                    <a class="contact-action" href="tel:010-2222-3333">전화하기</a>
+                <div class="contact-card" onclick="callOrMessage('010-5376-8146')">
+                    <strong>어머니</strong>
+                    <p style="font-size:0.85rem; margin-top:4px;">김해숙</p>
+                    <div class="contact-icons">
+                        <a href="tel:010-5376-8146" onclick="event.stopPropagation()">📞</a>
+                    </div>
                 </div>
             </div>
             <div class="contact-group">
                 <p class="group-label">신부</p>
-                <div class="contact-card">
-                    <p class="contact-role">신부</p>
-                    <strong class="contact-name">김혜린</strong>
-                    <a class="contact-number" href="tel:010-9876-5432">010-9876-5432</a>
-                    <a class="contact-action" href="tel:010-9876-5432">전화하기</a>
+                <div class="contact-card" onclick="callOrMessage('010-2294-1545')">
+                    <strong>김혜린</strong>
+                    <div class="contact-icons">
+                        <a href="tel:010-2294-1545" onclick="event.stopPropagation()">📞</a>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <p class="contact-role">신부 아버지</p>
-                    <strong class="contact-name">김영식</strong>
-                    <a class="contact-number" href="tel:010-3333-4444">010-3333-4444</a>
-                    <a class="contact-action" href="tel:010-3333-4444">전화하기</a>
+                <div class="contact-card" onclick="callOrMessage('010-3333-4444')">
+                    <strong>아버지</strong>
+                    <p style="font-size:0.85rem; margin-top:4px;">김영식</p>
+                    <div class="contact-icons">
+                        <a href="tel:010-3333-4444" onclick="event.stopPropagation()">📞</a>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <p class="contact-role">신부 어머니</p>
-                    <strong class="contact-name">박종옥</strong>
-                    <a class="contact-number" href="tel:010-4444-5555">010-4444-5555</a>
-                    <a class="contact-action" href="tel:010-4444-5555">전화하기</a>
+                <div class="contact-card" onclick="callOrMessage('010-4444-5555')">
+                    <strong>어머니</strong>
+                    <p style="font-size:0.85rem; margin-top:4px;">박종옥</p>
+                    <div class="contact-icons">
+                        <a href="tel:010-4444-5555" onclick="event.stopPropagation()">📞</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -116,18 +120,26 @@
 
     <!-- 날짜 & 카운트다운 -->
     <section id="date" class="section">
+        <p class="calendar-label">CALENDAR</p>
         <h2>조현진 ❤️ 김혜린의 결혼식이 <span id="countdown"></span>일 남았습니다</h2>
+        <p class="date-summary">2026년 6월 28일 일요일 오후 1시</p>
+        <p class="date-venue">청량리교회</p>
         <div class="calendar">
             <div class="calendar-header">2026년 6월</div>
             <div class="calendar-days">
-                <div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
-                <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
-                <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div>
-                <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
-                <div>27</div><div class="highlight">28</div><div>29</div><div>30</div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
+                <div class="calendar-week sunday">일</div><div class="calendar-week">월</div><div class="calendar-week">화</div><div class="calendar-week">수</div><div class="calendar-week">목</div><div class="calendar-week">금</div><div class="calendar-week saturday">토</div>
+                <div class="calendar-empty"></div>
+                <div class="calendar-empty"></div>
+                <div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day saturday">5</div>
+                <div class="calendar-day sunday">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div><div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day saturday">12</div>
+                <div class="calendar-day sunday">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div><div class="calendar-day saturday">19</div>
+                <div class="calendar-day sunday">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div><div class="calendar-day saturday">26</div>
+                <div class="calendar-day sunday">27</div>
+                <div class="calendar-day wedding-day">
+                    <span class="day-number">28</span>
+                    <span class="day-note">오후 1시</span>
+                </div>
+                <div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-empty"></div><div class="calendar-empty"></div><div class="calendar-empty"></div>
             </div>
         </div>
     </section>

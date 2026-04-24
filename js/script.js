@@ -10,6 +10,15 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 60000); // 1분마다 업데이트
 
+function callOrMessage(number) {
+    const normalizedNumber = String(number).replace(/[^0-9+]/g, '');
+    const shouldCall = window.confirm(`${number}\n\n전화 앱으로 연결할까요?`);
+
+    if (shouldCall) {
+        window.location.href = `tel:${normalizedNumber}`;
+    }
+}
+
 // 계좌 복사
 function copyAccount(account) {
     navigator.clipboard.writeText(account).then(() => {
