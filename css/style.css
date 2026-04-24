@@ -551,7 +551,8 @@ body {
 }
 
 .location-note {
-    margin-top: 18px;
+    margin-top: 14px;
+    font-size: 0.9rem;
 }
 
 .map-preview {
