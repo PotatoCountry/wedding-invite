@@ -62,7 +62,7 @@ body {
     font-family: 'Gowun Batang', serif;
     color: #191919;
     margin-bottom: 18px;
-    font-size: 2rem;
+    font-size: 1.88rem;
     font-weight: 400;
 }
 
@@ -108,13 +108,13 @@ body {
 }
 
 .hero-copy h1 {
-    font-size: 2.9rem;
+    font-size: 2.72rem;
     margin-bottom: 18px;
     font-weight: 400;
 }
 
 .hero-copy p {
-    font-size: 1.08rem;
+    font-size: 1rem;
     line-height: 1.9;
     color: rgba(255,255,255,0.92);
 }
@@ -169,7 +169,7 @@ body {
 }
 
 .parents p {
-    font-size: 1.18rem;
+    font-size: 1.1rem;
     margin: 14px 0;
     color: #222;
     line-height: 1.8;
@@ -190,14 +190,14 @@ body {
 
 .message p {
     font-family: 'Gowun Batang', serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.9;
     margin: 16px 0;
     color: #121212;
 }
 
 .couple p {
-    font-size: 1.12rem;
+    font-size: 1.04rem;
     font-weight: 400;
     color: #222;
     margin-top: 34px;
@@ -222,7 +222,7 @@ body {
     font-weight: 400;
     color: #191919;
     text-align: center;
-    font-size: 1.38rem;
+    font-size: 1.28rem;
     margin-bottom: 4px;
     font-family: 'Gowun Batang', serif;
 }
@@ -245,7 +245,7 @@ body {
 .contact-name {
     line-height: 1.3;
     color: #111;
-    font-size: 1.02rem;
+    font-size: 0.96rem;
 }
 
 .contact-actions {
@@ -342,7 +342,7 @@ body {
     color: #7b7471;
     margin-bottom: 22px;
     text-align: center;
-    font-size: 0.98rem;
+    font-size: 0.92rem;
     line-height: 1.8;
     max-width: 520px;
 }
@@ -443,7 +443,7 @@ body {
 .calendar-week {
     font-weight: 700;
     color: #202020;
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     min-height: auto;
     padding-bottom: 8px;
 }
@@ -463,7 +463,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #222;
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     position: relative;
 }
 
@@ -479,7 +479,7 @@ body {
 }
 
 .date-summary {
-    font-size: 1.5rem;
+    font-size: 1.38rem;
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
@@ -489,7 +489,7 @@ body {
 }
 
 #date h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
     margin-bottom: 10px;
     color: #7a726d;
@@ -510,7 +510,7 @@ body {
     background: #ddb8bf;
     color: white;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0 auto;
 }
 
@@ -555,7 +555,7 @@ body {
 
 .location-address {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.38rem;
     font-weight: 700;
     color: #181818;
     line-height: 1.7;
@@ -563,7 +563,7 @@ body {
 
 .location-place {
     text-align: center;
-    font-size: 1.12rem;
+    font-size: 1.04rem;
     color: #b48f95;
     margin-top: 8px;
     font-weight: 700;
@@ -579,7 +579,7 @@ body {
 
 .location-note {
     margin-top: 14px;
-    font-size: 0.9rem;
+    font-size: 0.84rem;
 }
 
 .map-preview {
@@ -624,7 +624,7 @@ body {
 }
 
 .traffic-title {
-    font-size: 1.35rem;
+    font-size: 1.24rem;
     color: #111;
     font-weight: 700;
     margin-bottom: 12px;
@@ -633,7 +633,7 @@ body {
 .traffic-text {
     color: #333;
     line-height: 1.85;
-    font-size: 1rem;
+    font-size: 0.94rem;
     word-break: keep-all;
 }
 
@@ -665,7 +665,7 @@ body {
     cursor: pointer;
     padding: 22px 24px;
     text-align: center;
-    font-size: 1.18rem;
+    font-size: 1.08rem;
     color: #111;
     position: relative;
 }
@@ -713,7 +713,7 @@ body {
 
 .account-person {
     color: #111;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -721,7 +721,7 @@ body {
 .account-text {
     color: #161616;
     line-height: 1.7;
-    font-size: 1.04rem;
+    font-size: 0.98rem;
 }
 
 .text-button {
