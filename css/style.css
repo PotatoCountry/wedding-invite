@@ -534,16 +534,59 @@ body {
 }
 
 /* 오시는 길 */
-.map-container img {
+.map-container {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    max-width: 410px;
+}
+
+.location-address {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #181818;
+    line-height: 1.7;
+}
+
+.location-place {
+    text-align: center;
+    font-size: 1.05rem;
+    color: #7d6d6d;
+    margin-top: 6px;
+    font-weight: 700;
+}
+
+.location-note,
+.parking-note {
+    text-align: center;
+    color: #6a6a4f;
+    line-height: 1.6;
+}
+
+.location-note {
+    margin-top: 14px;
+}
+
+.map-preview {
+    margin-top: 18px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid #eadfdf;
+    background: #f7f2ef;
+    box-shadow: 0 14px 28px rgba(71,74,55,0.08);
+}
+
+.map-preview iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
 }
 
 .map-buttons {
     display: flex;
     gap: 10px;
-    margin: 10px 0;
+    margin: 16px 0 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* 예식장 안내 */

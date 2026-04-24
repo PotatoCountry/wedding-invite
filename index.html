@@ -149,13 +149,22 @@
     <section id="location" class="section">
         <h2>오시는 길</h2>
         <div class="map-container">
-            <img src="images/map.jpg" alt="지도">
-            <p>서울 동대문구 약령시로 21길 25 <!-- (수정) 예식장 주소 --> </p>
-            <div class="map-buttons">
-                <a href="https://map.kakao.com/link/to/청량리교회" class="btn">카카오맵</a>
-                <a href="https://map.naver.com/v5/search/청량리교회" class="btn">네이버지도</a>
+            <p class="location-address">서울 동대문구 약령시로21길 25</p>
+            <p class="location-place">예수재림교 청량리교회</p>
+            <p class="location-note">아래 미리보기 지도를 확인하고, 버튼을 누르면 지도 앱 또는 지도 웹에서 바로 검색할 수 있습니다.</p>
+            <div class="map-preview">
+                <iframe
+                    title="예수재림교 청량리교회 지도 미리보기"
+                    src="https://www.google.com/maps?q=%EC%98%88%EC%88%98%EC%9E%AC%EB%A6%BC%EA%B5%90%20%EC%B2%AD%EB%9F%89%EB%A6%AC%EA%B5%90%ED%9A%8C&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <p>주차 안내: 교회 주차장 이용 가능</p>
+            <div class="map-buttons">
+                <a href="nmap://search?query=%EC%98%88%EC%88%98%EC%9E%AC%EB%A6%BC%EA%B5%90%20%EC%B2%AD%EB%9F%89%EB%A6%AC%EA%B5%90%ED%9A%8C&appname=https%3A%2F%2Fpotatocountry.github.io%2Fwedding-invite" class="btn">네이버앱</a>
+                <a href="https://map.naver.com/p/search/%EC%98%88%EC%88%98%EC%9E%AC%EB%A6%BC%EA%B5%90%20%EC%B2%AD%EB%9F%89%EB%A6%AC%EA%B5%90%ED%9A%8C" class="btn" target="_blank" rel="noopener noreferrer">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%98%88%EC%88%98%EC%9E%AC%EB%A6%BC%EA%B5%90%20%EC%B2%AD%EB%9F%89%EB%A6%AC%EA%B5%90%ED%9A%8C" class="btn" target="_blank" rel="noopener noreferrer">카카오맵</a>
+            </div>
+            <p class="parking-note">주차 안내: 교회 주차장 이용 가능</p>
         </div>
     </section>
     <div class="section-divider">★</div>
