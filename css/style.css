@@ -577,7 +577,14 @@ body {
     flex-wrap: wrap;
 }
 
-.account-list {
+.account-label-top {
+    color: #d0a1a8;
+    letter-spacing: 0.28em;
+    font-size: 0.88rem;
+    margin-bottom: 18px;
+}
+
+.account-accordion {
     width: 100%;
     max-width: 520px;
     display: flex;
@@ -585,20 +592,56 @@ body {
     gap: 14px;
 }
 
-.account-item {
+.account-panel {
     border: 1px solid #eee7e2;
     border-radius: 22px;
     background: white;
-    padding: 18px 20px;
     box-shadow: 0 10px 24px rgba(20,20,20,0.03);
+    overflow: hidden;
 }
 
-.account-head {
+.account-summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 22px 24px;
+    text-align: center;
+    font-size: 1.18rem;
+    color: #111;
+    position: relative;
+}
+
+.account-summary::-webkit-details-marker {
+    display: none;
+}
+
+.account-summary::after {
+    content: '⌄';
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa3a0;
+    font-size: 1.5rem;
+}
+
+.account-panel[open] .account-summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.account-panel-body {
+    border-top: 1px solid #f0e9e4;
+}
+
+.account-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 10px;
+    gap: 16px;
+    padding: 22px 24px;
+}
+
+.account-row + .account-row {
+    border-top: 1px solid #f5efea;
 }
 
 .account-label {
@@ -606,6 +649,13 @@ body {
     font-size: 0.92rem;
     font-weight: 700;
     letter-spacing: 0.06em;
+}
+
+.account-person {
+    color: #111;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .account-text {
@@ -826,6 +876,21 @@ body {
     .location-address,
     .date-summary {
         font-size: 1.4rem;
+    }
+    .account-summary {
+        padding: 18px 18px;
+        font-size: 1.08rem;
+    }
+    .account-summary::after {
+        right: 18px;
+    }
+    .account-row {
+        padding: 18px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .text-button {
+        align-self: flex-end;
     }
 }
 
