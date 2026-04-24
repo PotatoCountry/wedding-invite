@@ -1,27 +1,30 @@
-# 모바일 청첩장 사이트
+# 모바일 청첩장 정적 웹사이트
 
-이 프로젝트는 Flask를 사용하여 만든 간단한 모바일 청첩장 웹사이트입니다.
+HTML, CSS, JS로 만든 모바일 우선 청첩장 사이트입니다. GitHub Pages에 배포 가능합니다.
 
-## 설치 및 실행
+## 구성
+- 인트로 화면
+- 신랑 신부 이름
+- 결혼식 날짜와 시간
+- 예식장 위치
+- 갤러리
+- 카카오맵/네이버지도 링크
+- 계좌번호 복사 기능
+- 참석 여부 Google Form 링크
+- 카카오톡 공유 메타태그
+- 모바일 반응형 디자인
 
-1. Python이 설치되어 있어야 합니다.
-2. 터미널에서 다음 명령을 실행하여 Flask를 설치하세요:
-   ```
-   pip install -r requirements.txt
-   ```
-3. 앱을 실행하세요:
-   ```
-   python app.py
-   ```
-4. 브라우저에서 http://127.0.0.1:5000/ 으로 접속하세요.
+## GitHub Pages 배포
+1. 이 레포를 GitHub에 업로드
+2. Settings > Pages > Source: Deploy from a branch > Branch: main
+3. Save
+4. https://yourusername.github.io/repository-name 에서 확인
 
-## 사용법
+## 수정 방법
+- `index.html`: 내용 수정
+- `css/style.css`: 스타일 변경
+- `js/script.js`: 기능 추가
+- `images/`: 사진 교체
 
-- `app.py` 파일에서 청첩장 정보를 수정하세요 (groom_name, bride_name 등).
-- `static/images/` 폴더에 웨딩 사진을 넣고, `image_path` 변수를 업데이트하세요.
-- 모바일에서 보기 좋게 디자인되었습니다.
-
-## 기능
-
-- 텍스트와 사진만 수정하면 청첩장을 만들 수 있습니다.
-- 모바일 친화적 디자인.
+## 샘플
+https://makedear.com/mcard/view/_33RRCZ
